@@ -8,15 +8,14 @@ import java.sql.SQLException;
  * Класс для подключения к базе данных.
  */
 public class ConnectionFactory {
-
-    private static final String DRIVER = "org.postgresql.Driver";
-    private static final String URL = "jdbc:postgresql://localhost:5432/java_a_to_z";
-    private static final String USERNAME = "postgres";
-    private static final String PASSWORD = "root";
-
+    /**
+     * Конструктор.
+     */
     public ConnectionFactory() {
+        Config config = new Config();
+        config.load();
         try {
-            Class.forName(DRIVER);
+            Class.forName(config.getDriver());
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -29,6 +28,8 @@ public class ConnectionFactory {
      * @throws SQLException исключение
      */
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        Config config = new Config();
+        config.load();
+        return DriverManager.getConnection(config.getUrl(), config.getLogin(), config.getPassword());
     }
 }
