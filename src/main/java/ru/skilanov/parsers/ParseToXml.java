@@ -13,7 +13,7 @@ import java.io.FileOutputStream;
 import java.util.List;
 
 /**
- * Класс парсинга xml, реализующий интерфейс XmlParserю
+ * Класс парсинга xml, реализующий интерфейс XmlParser.
  */
 public class ParseToXml implements XmlParser {
 

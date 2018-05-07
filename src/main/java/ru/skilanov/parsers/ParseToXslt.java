@@ -12,12 +12,21 @@ import java.io.File;
  */
 public class ParseToXslt implements XsltParser {
 
+    /**
+     * Файл xslt для изменения xml.
+     */
     private static final String TRANSFORMER = "channel.xsl";
+    /**
+     * Изменяемый xml файл.
+     */
     private static final String INPUT_FILE = "1.xml";
+    /**
+     * Измененный xml файл.
+     */
     private static final String OUTPUT_FILE = "2.xml";
 
     /**
-     *
+     * Трансформация xml с помощью xslt.
      */
     @Override
     public void transformXml() {

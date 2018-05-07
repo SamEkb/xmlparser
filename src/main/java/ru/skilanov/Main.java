@@ -16,6 +16,10 @@ public class Main {
      * Количество полей.
      */
     private static final int FIELD_COUNT = 10;
+    /**
+     * Константа 0.
+     */
+    private static final int NULL = 0;
 
     /**
      * Точка входа в программу.
@@ -45,7 +49,7 @@ public class Main {
         parseToXml.unMarshall();
 
         List<Item> itemList = tw.getAll();
-        int result = 0;
+        int result = NULL;
         for (Item i : itemList) {
             result = result + i.getField();
         }

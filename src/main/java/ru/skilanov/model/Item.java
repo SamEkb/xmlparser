@@ -4,6 +4,9 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * Класс модель item.
+ */
 @XmlRootElement(name = "item")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Item {

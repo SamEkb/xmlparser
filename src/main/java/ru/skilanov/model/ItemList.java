@@ -5,6 +5,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Класс wrapper.
+ */
 @XmlRootElement(name = "items")
 public class ItemList {
 
@@ -19,6 +22,10 @@ public class ItemList {
         this.itemList = itemList;
     }
 
+    /**
+     * Добавление item.
+     * @param item Item
+     */
     public void add(Item item) {
         itemList.add(item);
     }
